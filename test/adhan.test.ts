@@ -321,6 +321,14 @@ test('getting the time for a given prayer', () => {
   expect(p.timeForPrayer(Prayer.None)).toBeNull();
 });
 
+test('helloz', () => {
+  const date = new Date(2023, 0, 24);
+
+  const params = CalculationMethod.Tunisia();
+  const p = new PrayerTimes(new Coordinates(36.8, 10.183), date, params);
+  expect(moment(p.dhuhr).format()).toBe(4);
+});
+
 test('getting the current prayer', () => {
   const date = new Date(2015, 8, 1);
   const params = CalculationMethod.Karachi();

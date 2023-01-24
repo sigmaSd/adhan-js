@@ -40,7 +40,11 @@ function parseParams(data: {
     params = CalculationMethod.Turkey();
   } else if (method === 'Tehran') {
     params = CalculationMethod.Tehran();
-  } else {
+  }
+  else if (method == "Tunisia") {
+    params = CalculationMethod.Tunisia();
+  }
+  else {
     params = CalculationMethod.Other();
   }
 

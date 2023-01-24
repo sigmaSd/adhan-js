@@ -97,6 +97,11 @@ const CalculationMethod = {
     return params;
   },
 
+  // Tunisia
+  Tunisia() {
+    return new CalculationParameters('Tunisia');
+  },
+
   // Other
   Other() {
     return new CalculationParameters('Other', 0, 0);
